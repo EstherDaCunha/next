@@ -15,7 +15,7 @@ export default function Calendario() {
     const tasks: Task[] = [
         {
             start: new Date(2024, 1, 1),
-            end: new Date(2024, 1, 2),
+            end: new Date(2024, 4, 2),
             name: 'SSO',
             id: "1",
             type: 'task',
@@ -48,7 +48,7 @@ export default function Calendario() {
 
         {
             start: new Date(2024, 4, 5),
-            end: new Date(2024, 4, 7),
+            end: new Date(2024, 8, 7),
             name: 'Componentes',
             id: "4",
             type: 'task',
