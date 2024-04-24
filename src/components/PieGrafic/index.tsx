@@ -5,8 +5,9 @@ ChartJS.register(ArcElement, Tooltip, Legend);
 
 export default function Grafico() {
     const data = {
+        labels: ['Programação', 'Fluxograma', 'Mapeamento', 'Reunião'],
         datasets: [{
-            data: [3, 6, 9,2],
+            data: [3, 6, 9, 2],
             backgroundColor: ['#9E2896', '#1C8580', '#017CC0', '#03894C']
         }]
     };
@@ -21,17 +22,20 @@ export default function Grafico() {
             legend: {
                 display: true,
             },
-            
+
         }
     };
 
     return (
-        <div className='border border-gray-300 w-[20em] h-[20em] m-5 rounded'>
-            <Pie
-                data={data}
-                options={options}
-                style={{width:'23em', height:'23em'}}
-            />
+        <div className='border border-gray-300 w-[20em] h-[25em] m-5 rounded'>
+            <div className='m-3 mt-[20%]'>
+                <Pie
+                    data={data}
+                    options={options}
+                    style={{ width: '23em', height: '23em' }}
+                />
+            </div>
+
         </div>
     );
 }

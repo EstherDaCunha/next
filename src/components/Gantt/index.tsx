@@ -60,29 +60,31 @@ export default function Calendario() {
 
     ];
 
-    const tasksWithoutLegend = tasks.map(task => {
-        const { styles, ...rest } = task;
-        return rest;
-    });
+    const columns = []
 
 
     return (
-        <div className='p-4 w-[52%] h-[20em] border border-gray-300 m-5 rounded'>
+        <div className='p-4 w-[52%]  border border-gray-300 m-5 rounded'>
 
-            {/* <div>
+            <div>
                 <h1 className='font-bold text-2xl text-palette-gray mb-4'>Cronograma de Tasks</h1>
-            </div> */}
+            </div>
 
             <div className='space-x-5'>
                 <button onClick={() => onViewModeChange(ViewMode.Week)} className='bg-palette-blue w-[70px] h-[30px] text-white font-semibold rounded'>Week</button>
                 <button onClick={() => onViewModeChange(ViewMode.Day)} className='bg-palette-sea-green w-[70px] h-[30px] text-white font-semibold rounded'>Day</button>
                 <button onClick={() => onViewModeChange(ViewMode.Month)} className='bg-palette-pink w-[70px] h-[30px] text-white font-semibold rounded'>Month</button>
             </div>
-{/* 
+
+            <div className='font-bold pt-3'>
             <Gantt
-                tasks={tasksWithoutLegend}
+                tasks={tasks}
                 viewMode={viewMode}
-            /> */}
+                listCellWidth=''
+                fontSize='10'
+                columnWidth={46}
+            />
+            </div>
         </div>
     )
 }
