@@ -4,7 +4,7 @@ import "gantt-task-react/dist/index.css";
 
 
 export default function Calendario() {
-    const [viewMode, setViewMode] = useState(ViewMode.Day);
+    const [viewMode, setViewMode] = useState(ViewMode.Month);
 
     const onViewModeChange = (mode: ViewMode) => {
         setViewMode(mode);
@@ -71,8 +71,6 @@ export default function Calendario() {
             </div>
 
             <div className='space-x-5'>
-                <button onClick={() => onViewModeChange(ViewMode.Week)} className='bg-palette-blue w-[70px] h-[30px] text-white font-semibold rounded'>Week</button>
-                <button onClick={() => onViewModeChange(ViewMode.Day)} className='bg-palette-sea-green w-[70px] h-[30px] text-white font-semibold rounded'>Day</button>
                 <button onClick={() => onViewModeChange(ViewMode.Month)} className='bg-palette-pink w-[70px] h-[30px] text-white font-semibold rounded'>Month</button>
             </div>
 

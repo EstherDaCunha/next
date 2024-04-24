@@ -14,6 +14,7 @@ import Grafico from "@/components/PieGrafic";
 import Calendario from "@/components/Gantt";
 import Filter from "@/components/Filter";
 import { DefaultAccordion } from "@/components/AccordionOpen";
+import RoomCard from "@/components/RoomCard";
 
 export default function Home() {
     const [showModal, setShowModal] = useState<boolean>(false)
@@ -103,7 +104,6 @@ export default function Home() {
                     <h1 className="font-bold text-palette-sea-green">Latest Registration</h1>
                     <DefaultAccordion />
                 </div>
-
             </div>
 
         </>
